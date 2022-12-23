@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>tic_tac_toe module &#8212; документация Игра &#34;Крестики-нолики&#34; 1.0</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-tic_tac_toe">
+<span id="tic-tac-toe-module"></span><h1>tic_tac_toe module<a class="headerlink" href="#module-tic_tac_toe" title="Permalink to this heading">¶</a></h1>
+<p>Класс TicTacToe описывает реализацию игры Крестики-нолики</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="tic_tac_toe.TicTacToe">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tic_tac_toe.</span></span><span class="sig-name descname"><span class="pre">TicTacToe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player_symbol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tic_tac_toe.TicTacToe" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Базовые классы: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_toe.TicTacToe.check_coord">
+<span class="sig-name descname"><span class="pre">check_coord</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_coord</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tic_tac_toe.TicTacToe.check_coord" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция, которая проверяет координаты вида «1A» или «A1» на допустимые значения и возвращает True в случае, если координата существует и False в случае, если координата не существует</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры</dt>
+<dd class="field-odd"><p><strong>field_coord</strong> – координата в виде строки</p>
+</dd>
+<dt class="field-even">Результат</dt>
+<dd class="field-even"><p>True или False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_toe.TicTacToe.draw_field">
+<span class="sig-name descname"><span class="pre">draw_field</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tic_tac_toe.TicTacToe.draw_field" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция, которая выводит содержимое игрового поля на экран</p>
+<dl class="simple">
+<dt>Пример вывода:</dt><dd><p>A   B   C</p>
+</dd>
+<dt>1    X ║   ║</dt><dd><p>═══╬═══╬═══</p>
+</dd>
+<dt>2      ║ O ║</dt><dd><p>═══╬═══╬═══</p>
+</dd>
+</dl>
+<p>3      ║   ║ X</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_toe.TicTacToe.edit_field">
+<span class="sig-name descname"><span class="pre">edit_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_coord</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tic_tac_toe.TicTacToe.edit_field" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция, которая изменяет значение клетки игрового поля</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры</dt>
+<dd class="field-odd"><p><strong>field_coord</strong> – координата в виде строки</p>
+</dd>
+<dt class="field-even">Результат</dt>
+<dd class="field-even"><p>True, если операция была выполнена, False, если операция не выполнена</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_toe.TicTacToe.is_full">
+<span class="sig-name descname"><span class="pre">is_full</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tic_tac_toe.TicTacToe.is_full" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция, которая проверяет игровое поле на заполненность</p>
+<dl class="field-list simple">
+<dt class="field-odd">Результат</dt>
+<dd class="field-odd"><p>True, если ни один игрок не выиграл, но поле полностью заполнено, False, если какой-либо игрок победил, либо поле заполнено не полностью</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_toe.TicTacToe.is_win">
+<span class="sig-name descname"><span class="pre">is_win</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player_symbol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tic_tac_toe.TicTacToe.is_win" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция, которая проверяет выиграл ли пользователь с определенным символом</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры</dt>
+<dd class="field-odd"><p><strong>player_symbol</strong> – Может принимать значения „X“ или „O“</p>
+</dd>
+<dt class="field-even">Результат</dt>
+<dd class="field-even"><p>True, если игрок с символом, переданным в качестве аргумента, выиграл или False, если напротив, игрок с этим символом проиграл</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_toe.TicTacToe.restart">
+<span class="sig-name descname"><span class="pre">restart</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tic_tac_toe.TicTacToe.restart" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция, которая отвечает за перезапуск игры, очистку игрового поля</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_toe.TicTacToe.str_coord_to_int">
+<span class="sig-name descname"><span class="pre">str_coord_to_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_coord</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tic_tac_toe.TicTacToe.str_coord_to_int" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция, которая получает координаты вида «1A» или «A1» и преобразует их в целое число 0..8</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры</dt>
+<dd class="field-odd"><p><strong>field_coord</strong> – координата в виде строки</p>
+</dd>
+<dt class="field-even">Результат</dt>
+<dd class="field-even"><p>Целое число 0..8</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tic_tac_toe.TicTacToe.update_field">
+<span class="sig-name descname"><span class="pre">update_field</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other_field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tic_tac_toe.TicTacToe.update_field" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция, которая обновляет игровое поле игровым полем другого игрока</p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры</dt>
+<dd class="field-odd"><p><strong>other_field</strong> – игровое поле, которым дополняется наше поле</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Игра "Крестики-нолики"</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигация</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Климов Святослав, БИБ223.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/tic_tac_toe.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
